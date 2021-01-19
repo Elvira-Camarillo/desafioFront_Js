@@ -1,0 +1,97 @@
+.profile-user .card-image-profile {
+  width: 3em;
+}
+.profile-user .card-title {
+  position: relative;
+  top: -100px;
+  left: 80px;
+}
+.profile-user .card-image-profile {
+  position: relative;
+  top: -45px;
+}
+.profile-user .card-text {
+  position: relative;
+  top: -80px;
+}
+.profile-user .boton-2 {
+  border-radius: 5px;
+  color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  font-size: 1em;
+  font-family: #3b49df;
+  font-weight: bold;
+  background-color: #3b49df;
+  position: relative;
+  top: -80px;
+}
+.profile-user .boton-2:hover {
+  background-color: #1827ce;
+  color: white;
+}
+.profile-user .card-body {
+  font-family: "helvetica neue";
+  font-size: 1em;
+}
+.profile-user .card-body .card-text {
+  color: #585f65;
+}
+.profile-user .profile-data {
+  position: relative;
+  top: -80px;
+}
+.profile-user .profile-data h6 {
+  font-family: "helvetica neue";
+  font-size: 12px;
+  color: #6b7888;
+  font-weight: bold;
+}
+
+.detail-user {
+  font-family: "helvetica neue";
+  /* visited link */
+  /* mouse over link */
+  /* selected link */
+  /* visited link */
+  /* mouse over link */
+  /* selected link */
+}
+.detail-user h5 {
+  font-weight: bold;
+}
+.detail-user .a-1:link {
+  color: #3845c7;
+}
+.detail-user .a-1:visited {
+  color: #3845c7;
+}
+.detail-user .a-1:hover {
+  color: #3845c7;
+  text-decoration: none;
+}
+.detail-user .a-1:active {
+  color: black;
+}
+.detail-user .a-2:link {
+  color: black;
+}
+.detail-user .a-2:visited {
+  color: black;
+}
+.detail-user .a-2:hover {
+  color: #3845c7;
+  text-decoration: none;
+}
+.detail-user .a-2:active {
+  color: #3845c7;
+}
+.detail-user .list-group li {
+  font-size: 16px;
+}
+.detail-user .list-group p {
+  padding-top: 1em;
+  font-size: 15px;
+  color: #585f65;
+  line-height: 150%;
+  word-spacing: 1em;
+}

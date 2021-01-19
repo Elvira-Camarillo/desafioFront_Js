@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-family;
+    background-color: $bg-body;
+    color:#2b2f33;
+    line-height: 1.25;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+img{
+    max-width: 100%;
+}
+
+.container, .container-lg, .container-md, .container-sm, .container-xl{
+    max-width: 1280px !important;
+}
+

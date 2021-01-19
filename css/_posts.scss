@@ -1,0 +1,193 @@
+.cards-main{
+    .container-post-menu{
+        .icon_db{
+            width: 24px;
+            height: 24px;
+        }
+        .post_title{
+            font-size: 18px;
+            font-weight: bold;
+            color: #212529;
+        }
+        .menu_rigth{
+            .select-menu{
+                appearance: none;
+                -webkit-appearance: none;
+                color: #08090a;
+                font-size: 16px;
+                background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDE2TDYgMTBIMThMMTIgMTZaIiBmaWxsPSIjMDgwOTBBIi8+Cjwvc3ZnPg==);
+                background-position: 90% center;
+                background-repeat: no-repeat;
+                border: none;
+                border: 1px solid $form-border;
+                outline: none;
+                &:focus{
+                    border: 1px solid $focus-form-border;
+                    box-shadow: 1px 1px 0 $focus-form-border;
+                }
+            }
+            .nav_menu{
+                a{
+                    color: #08090a;
+                    border-radius: 4px;
+                    border-bottom: 2px solid transparent;
+                    &:hover{
+                        background-color: rgba(59,73,223,0.1);
+                        color: #3b49df;
+                    }
+                    &.active{
+                        border-bottom: 4px solid #3b49df;
+                        border-radius: 0;
+                    }
+                }
+            }
+        }
+    }
+    .card_main{
+        box-shadow: 0 0 0 1px $card-border;
+        .author{
+            .img-author{
+                width: 32px;
+                height: 32px;
+                margin-right: .5rem;
+            }
+            .author_data{
+                a{
+                    color: #4d5760;
+                    font-size: 0.875rem;
+                }
+                p{
+                    font-size: .75rem;
+                    color: $color-gray;
+                }
+            }
+        }
+        .card-resume{
+            padding-left: 2.5rem;
+            h3{
+                color: #08090A;
+                font-size: 1.25rem;
+                font-weight: bold;
+            }
+            .hashtags{
+                color: $color-gray;
+                font-size: .875rem;
+            }  
+            .icon-card-item{
+                font-size: .875rem;
+            }
+            .mins-to-read{
+                color: $color-gray;
+            }
+            .btn-save{
+                background-color: $color-silver;
+                font-size: 0.875rem;
+                color: $color-button-dark;
+            }
+        }
+    }
+}
+
+.aside-home{
+    .aside-listen{
+        box-shadow: 0 0 0 1px $card-border;
+        background:white;
+        .aside-listen-img{
+            min-width: 115px;
+            .aside-listen-img-l{
+                min-width: 115px;
+                height: 115px;
+                display: inline-block;
+            }
+            span{
+                color: $button-primary-bg-hover;
+                font-weight: 600;
+                font-size: .785rem;
+            }
+        }
+        .aside-listen-txt{
+            h4{
+                font-size: 1rem;
+                font-weight: 600;
+            }
+            p{
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+.aside-listing-posts{
+    box-shadow: 0 0 0 1px $card-border;
+    background-color: $bg-secondary-card;
+    .listing-posts-head{
+        border-bottom: 1px solid $bg-body;
+        strong{
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+        a{
+            color: $focus-form-border;
+            text-decoration: none;
+            font-size: .875rem;
+            font-weight: 600;
+        }
+    }
+    .listing-posts-item{
+        border-bottom: 1px solid $bg-body;
+    }
+    .listing-posts-title{
+        font-size: 1rem;
+    }
+    .listing-posts-category{
+        color: $color-gray;
+        font-size: .875rem;
+        display: block;
+    }   
+    .listing-posts-indicator{
+        padding: .25rem;
+        border-radius: 4px;
+        color: #fff;
+        background-color: $button-primary-bg;
+        display: inline-block;
+        font-size: .75rem;
+    }
+    .listing-posts-link{
+        text-align: center;
+        width: 100%;
+        color: $color-link;
+        &:hover{
+            color: $button-primary-bg;
+        }
+    }
+}
+
+.card-detail{
+    .title-article{
+        font-size:  3rem;
+    }
+    .list_tags a{
+        padding: .25rem;
+        color: #fff;
+    }
+    .img-author-avatar{
+        width: 2rem;
+        height: 2rem;
+    }
+    .date-article{
+        color: $color-gray;
+    }
+}
+.card-body-article{
+    ol{
+        padding-left: 1rem;
+    }
+    img{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        max-width: 100%;
+    }
+    h3{
+        margin-top: 1.5rem;
+    }
+}

@@ -1,0 +1,61 @@
+.aside-left{
+    .img-avatar{
+        max-width: 48px;
+        height: 48px;
+    }
+    .resources{
+    
+        ul{
+            max-height: 42vh;
+            overflow-y: auto;
+        }
+    
+        .list-item{
+            width: 100%;
+            a{
+                padding: 4px;
+                width: 100%;
+                display: inline-block;
+                text-decoration: none;
+                color: black;
+            }
+            a:hover{
+                background-color: $icon-bg;
+                color: #1827ce;
+            }
+        }
+    }
+}
+
+.icons-interaction{
+    a.heart-icon,
+    a.unicorn-icon,
+    a.bookmark-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 40px;
+        transition: all linear .25s;
+    }
+    a.heart-icon:hover{
+        background-color: rgba(220,24,24,.1);
+        svg path {
+            fill: #dc1818;
+        }
+    }
+
+    a.unicorn-icon:hover{
+        background-color: rgba(38,217,202,.1);
+        svg path {
+            fill: #26d9ca;
+        }
+    }
+
+    a.bookmark-icon:hover{
+        background-color: rgba(59,73,223,.1);
+        svg path {
+            fill: #3b49df;
+        }
+    }
+}

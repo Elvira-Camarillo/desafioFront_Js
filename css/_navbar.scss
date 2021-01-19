@@ -1,0 +1,51 @@
+.boton{
+    border-radius: $button-radius;
+    color: $button-primary-font-color;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    font-size: $button-font-size;
+    font-family: $button-font-family;
+    background-color: $button-primary-bg;
+    &:hover{
+        background-color: $button-primary-bg-hover;
+    }
+}
+
+.dropdown-menu{
+    border-radius: $button-radius;
+    border: 3px solid black;
+}
+
+.bg-textfield{
+    background-color: $button-primary-font-color;
+}
+
+.icon-hover{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    padding: 0;
+    &:hover{
+        background-color: $icon-bg;
+
+    }
+}
+
+.carita{
+    width: 30px;
+    border: 1px solid lightgray;
+}
+
+.search-textfield{
+    max-width: 420px;
+}
+
+#sombrita{
+    box-shadow: 10px 10px;
+}
+
+.nav-header{
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1021;
+}
