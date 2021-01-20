@@ -218,6 +218,11 @@ img {
 
 .cards-main .card_main .card-resume {
   padding-left: 2.5rem;
+  line-height: 250%;
+  /* unvisited link */
+  /* visited link */
+  /* mouse over link */
+  /* selected link */
 }
 
 .cards-main .card_main .card-resume h3 {
@@ -243,6 +248,33 @@ img {
   background-color: #d2d6db;
   font-size: 0.875rem;
   color: #363d44;
+}
+
+.cards-main .card_main .card-resume .title-article:link {
+  color: #08090a;
+}
+
+.cards-main .card_main .card-resume .title-article:visited {
+  color: #08090a;
+}
+
+.cards-main .card_main .card-resume .title-article:hover {
+  color: #3845c7;
+  text-decoration: none;
+}
+
+.cards-main .card_main .card-resume .title-article:active {
+  color: #3845c7;
+}
+
+.cards-main .card_main .card-resume .title-article {
+  font-size: 2em;
+  font-weight: bold;
+  font-family: 'helvetica neue';
+}
+
+.cards-main .card_main .card-resume span {
+  color: #2b2e33;
 }
 
 .aside-home .aside-listen {
@@ -369,7 +401,7 @@ img {
   font-family: 'helvetica neue';
 }
 
-.footer-list-1 {
+.title-link {
   line-height: 250%;
   /* unvisited link */
   /* visited link */
@@ -377,20 +409,20 @@ img {
   /* selected link */
 }
 
-.footer-list-1 a:link {
+.title-link a:link {
   color: #2b2e33;
 }
 
-.footer-list-1 a:visited {
+.title-link a:visited {
   color: #2c2f34;
 }
 
-.footer-list-1 a:hover {
+.title-link a:hover {
   color: #3845c7;
   text-decoration: none;
 }
 
-.footer-list-1 a:active {
+.title-link a:active {
   color: #3845c7;
 }
 

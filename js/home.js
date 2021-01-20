@@ -21,7 +21,7 @@ $(function () {
                     </div>
                 </div>
                 <div class="card-resume">
-                    <h3>${response[item].title_post}</h3>
+                    <a href="./post.html?id=${item}" class="text-reset title-article">${response[item].title_post}</a>
                     <div class="hashtags ml-n1 mb-2">#${response[item].tag_post}</div>
                     <div class="icon-card d-flex justify-content-between">
                         <div class="icon-card_left d-flex justify-content-start align-items-center">
@@ -49,7 +49,6 @@ $(function () {
         }
 
         $('.container-post').append(postHtml)
-
     }
     $.ajax({
         url: "https://retofrontend-d1659-default-rtdb.firebaseio.com/posts/.json",
