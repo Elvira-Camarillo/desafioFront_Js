@@ -4,13 +4,13 @@ $(function () {
     const paintPosts = (response) => {
         console.log(response)
         let postHtml = ''
-        let counter = 1
+        let counter = postHtml.length-1
         let imagePost = ''
         for (item in response) {
             if (counter === 1) {
                 imagePost = `<img src="${response[item].urlPhoto_post}" class="card-img-top" alt="...">`
             }
-            postHtml += `<div class="card_main mb-2 bg-white rounded postShow">
+            postHtml = `<div class="card_main mb-2 bg-white rounded postShow">
                 ${imagePost}
                 <div class="card-body">
                 <div class="d-flex flex-wrap author align-items-center mb-2">
@@ -43,7 +43,7 @@ $(function () {
                     </div>
                 </div>
             </div>
-        </div>`
+        </div>` + postHtml
             counter++
             imagePost = ''
         }
