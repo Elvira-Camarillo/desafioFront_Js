@@ -12,20 +12,20 @@ const printPosts = (response) => {
     let text = ''
     for (item in response){
         text += `<div class="card-body">
-                <p class="card-detail name">${response[item].author}</p>
-                <p class="card-detail name">${response[item].content}</p>
-                <p class="card-detail name">${response[item].dataCreated}</p> X
-                <p class="card-detail name">${response[item].minsToRead}</p>  X
-                <p class="card-detail name">${response[item].tag}</p>
-                <p class="card-detail name">${response[item].title}</p>
-                <p class="card-detail name">${response[item].urlAuthor}</p>
-                <p class="card-detail name">${response[item].urlPhoto}</p>
+                <p class="card-detail name">${response[item].author_post}</p>
+                <p class="card-detail name">${response[item].content_post}</p>
+                <p class="card-detail name">${response[item].dateCreated_post}</p> X
+                <p class="card-detail name">${response[item].minsToRead_post}</p>  X
+                <p class="card-detail name">${response[item].tag_post}</p>
+                <p class="card-detail name">${response[item].title_post}</p>
+                <p class="card-detail name">${response[item].author_urlPhoto}</p>
+                <p class="card-detail name">${response[item].urlPhoto_post}</p>
             </div>`
     }
     $('.showPosts').html(text)
 }
 
-$(function(){
+const getTags = () =>{
     // GET
     $.ajax({
         url: "https://retofrontend-d1659-default-rtdb.firebaseio.com/tags/.json",  //"https://koders1gpython-default-rtdb.firebaseio.com/oscar/users/.json",
@@ -38,9 +38,10 @@ $(function(){
         console.error(err.statusText)
         console.log('todo mal')
     })
-})
+}
 
-$(function(){
+// $(function(){
+const getPosts = () =>{
     // GET
     $.ajax({
         url: "https://retofrontend-d1659-default-rtdb.firebaseio.com/posts/.json",  //"https://koders1gpython-default-rtdb.firebaseio.com/oscar/users/.json",
@@ -53,4 +54,4 @@ $(function(){
         console.error(err.statusText)
         console.log('todo mal')
     })
-})
+}
