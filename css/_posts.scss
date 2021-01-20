@@ -84,6 +84,38 @@
                 font-size: 0.875rem;
                 color: $color-button-dark;
             }
+            line-height: 250%;
+            
+        /* unvisited link */
+            .title-article:link {
+                color: #08090a;
+            }
+        
+        /* visited link */
+            .title-article:visited {
+                color: #08090a;
+            }
+        
+        /* mouse over link */
+            .title-article:hover {
+                color: #3845c7;
+                text-decoration: none;
+            }
+        
+        /* selected link */
+            .title-article:active {
+                color: #3845c7;
+            }
+
+            .title-article {
+                font-size: 2em;
+                font-weight: bold;
+                font-family: 'helvetica neue';
+            }
+
+            span {
+                color:#2b2e33;
+            }
         }
     }
 }
@@ -191,3 +223,4 @@
         margin-top: 1.5rem;
     }
 }
+
