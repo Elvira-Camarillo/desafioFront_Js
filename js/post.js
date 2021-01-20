@@ -7,9 +7,9 @@ const printPosDetail = (response) => {
     $('.title-article').text(response.title_post)
     $('#tag_post').text('#'+response.tag_post)
     $('.urlphoto_author').attr('src',response.author_urlPhoto)
-    $('#name_author').text(response.author_post)
+    $('.name_author').text(response.author_post)
     $('#content_post').html(response.content_post)
-    $('#minroread').text(response.minsToRead_post)
+    $('#minroread').text(response.minsToRead_post+' min read')
     $('#date_created_post').text(response.dateCreated)
     
     let day = new Date(response.dateCreated).getDate()

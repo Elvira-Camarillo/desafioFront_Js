@@ -33,13 +33,22 @@
 
                 <div class="col-6 col-lg-6 bg-white d-flex  justify-content-end align-items-center">
                     <ul class="nav">
-                        <li class="nav-item d-flex align-items-center">
+                        <li class="nav-item d-flex align-items-center pr-2">
                             <button
                               class="btn btn-outline-success boton d-none d-md-block"
                               type="submit"
                               onclick="window.location.pathname='/newpost.html'"
                             >
                               Nuevo Post
+                            </button>
+                        </li>
+                        <li class="nav-item d-flex align-items-center">
+                            <button
+                              class="btn btn-outline-success boton d-none d-md-block"
+                              type="submit"
+                              onclick="window.location.pathname='/editpost.html'"
+                            >
+                              Editar Post
                             </button>
                         </li>
                         <li class="nav-item d-flex align-items-center align-self-center">
@@ -125,9 +134,12 @@
                                       <div class="border border-secondary rounded-circle bg-primary img-author-avatar overflow-hidden">
                                         <img src="" class="urlphoto_author">
                                       </div>
-                                      <div class="author_data d-flex mt-">
-                                        <a href="" class="text-reset" id="name_author"></a>
-                                        <p class="mb-0 date-article" > <span id="date_created_post">fecha</span> . <span class="ml-1" id="minroread"></span> min read </p>
+                                      <div class="author_data d-flex ">
+                                        <a href="" class="text-reset name_author" id=""></a>
+                                        <div class="mb-0 date-article align-middle" > 
+                                            <span id="date_created_post" class="ml-3"></span> 
+                                            <span class="ml-3" id="minroread"></span> 
+                                        </div> 
                                       </div>
                                     </div>
                                   </div>
@@ -144,8 +156,8 @@
                                     <div class="card-body">
                                         <img class="card-image-profile img-fluid rounded-circle w-25 mb-3 urlphoto_author"
                                             src="" alt="" >
-                                        <h5 class="card-title font-weight-bold" id="name_author"></h5>
-                                        <p class="card-text">Just another Web Dev. Loves JavaScript &lt;/ReactJS&gt;. </p>
+                                        <h5 class="card-title font-weight-bold name_author" id=""></h5>
+                                        <p class="card-text">JI'm a front-end developer in a constant state of learning and exploring new things. </p>
                                         <button class="btn btn-outline-none boton-2 btn-lg btn-block" type="submit">
                                             Follow
                                         </button>
@@ -161,7 +173,7 @@
                                 </div>
                                 <div class="detail-user card mt-3">
                                     <ul class="list-group list-group-flush">
-                                        <li class="list-group-item mt-2"> <h5>More from <a href="#" class="a-1">Darsh Shah</a></h5></li>
+                                        <li class="list-group-item mt-2"> <h5>More from <a href="#" class="a-1 name_author"></a></h5></li>
                                         <li class="list-group-item mt-2"><a href="#" class="a-2">JavaScript console API</a> <p class="detail-user-hashtags">#javascript #webdev #codenewbie #beginners</p></li>
                                         <li class="list-group-item mt-2"><a href="#" class="a-2">How to Add Your Recently Published Articles to Your GitHub Profile README using GitHub Actions 🤖 </a><p>#webdev #codenewbie #100daysofcode #beginners</p></li>
                                         <li class="list-group-item mt-2"><a href="#" class="a-2">Start Documenting your Journey ✍️ </a><p>#blogging #career #codenewbie #beginners</p></li>
