@@ -33,31 +33,6 @@ $(document).ready(function()  {
             })
         }
     })
-
-    // const printTags = (response) => {
-    //     let text = ''
-    //     for (item in response){
-    //         text += `<div class="card-body">
-    //                 <p class="card-detail name">${response[item].title}</p>
-    //             </div>`
-    //     }
-    //     $('.showTags').html(text)
-    // }
-
-    // const getTags = () =>{
-    //     $.ajax({
-    //         url: "https://retofrontend-d1659-default-rtdb.firebaseio.com/tags/.json",  //"https://koders1gpython-default-rtdb.firebaseio.com/oscar/users/.json",
-    //         method: 'GET'
-    //     }).done(function(response) {
-    //         printTags(response);
-    //     }).fail(function(err){
-    //         console.error(err)
-    //         console.error(err.status)
-    //         console.error(err.statusText)
-    //         console.log('todo mal')
-    //     })
-    // }    
-
     getTags();
 })
 
