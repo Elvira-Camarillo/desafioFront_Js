@@ -2,12 +2,14 @@
 
 $(function () {
     const paintPosts = (response) => {
-        console.log(response)
+        // console.log(response)
         let postHtml = ''
-        let counter = postHtml.length-4
+        let counter = 1
+        let len = Object.keys(response).length
+        // console.log(len)
         let imagePost = ''
         for (item in response) {
-            if (counter === 1) {
+            if (counter === len) {
                 imagePost = `<img src="${response[item].urlPhoto_post}" class="card-img-top" alt="...">`
             }
             postHtml = `<div class="card_main mb-2 bg-white rounded postShow">

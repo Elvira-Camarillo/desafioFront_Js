@@ -72,7 +72,11 @@ $('.button_update').click(function () {
     }).done(function (response) {
         // console.log(response)
         console.log('Post Actualizado')
-    }).fail(function (err) {
+        $('#alert_success_update').removeClass('d-none')
+                setTimeout(() => {
+                    $('#alert_success').addClass('d-none')
+                }, 3000);
+    }).fail(function(err){
         console.error(err)
     })
 })
