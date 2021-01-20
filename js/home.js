@@ -4,7 +4,7 @@ $(function () {
     const paintPosts = (response) => {
         console.log(response)
         let postHtml = ''
-        let counter = postHtml.length-1
+        let counter = postHtml.length-4
         let imagePost = ''
         for (item in response) {
             if (counter === 1) {
