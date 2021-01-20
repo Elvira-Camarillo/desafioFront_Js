@@ -14,15 +14,15 @@ $(function () {
                 ${imagePost}
                 <div class="card-body">
                 <div class="d-flex flex-wrap author align-items-center mb-2">
-                    <div class="border border-secondary rounded-circle bg-primary img-author"><img src="${response[item].author_urlPhoto}" class="card-img-top" alt="..."></div>
+                    <div class="img-author"><img src="${response[item].author_urlPhoto}" class="card-img-top border border-secondary rounded-circle bg-primary img-author" alt="..."></div>
                     <div class="author_data">
                         <a href="" class="text-reset">${response[item].author_post}</a>
-                        <p class="mb-0 data-created">${response[item].date_created_post}</p>
+                        <p class="mb-0 data-created">${response[item].dateCreated}</p>
                     </div>
                 </div>
                 <div class="card-resume">
                     <h3>${response[item].title_post}</h3>
-                    <div class="hashtags ml-n1 mb-2">${response[item].tag_post}</div>
+                    <div class="hashtags ml-n1 mb-2">#${response[item].tag_post}</div>
                     <div class="icon-card d-flex justify-content-between">
                         <div class="icon-card_left d-flex justify-content-start align-items-center">
                             <div class="icon-card-item d-flex align-items-center mr-3">
@@ -37,7 +37,7 @@ $(function () {
                             </div>
                         </div>
                         <div class="icon-card-rigth ">
-                            <small class="mins-to-read mr-1">${response[item].minsToRead_post}</small>
+                            <small class="mins-to-read mr-1">${response[item].minsToRead_post} min read</small>
                             <div class="btn btn-light btn-save">Save</div>
                         </div>
                     </div>
@@ -63,3 +63,4 @@ $(function () {
         console.log('Error')
     })
 })
+
