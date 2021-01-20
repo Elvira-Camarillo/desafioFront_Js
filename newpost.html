@@ -40,6 +40,14 @@
                 <div class="col-12 col-md-7">
                     <form class="bg-white mt-4 mb-4 p-4 card shadow">
                         <h1 class="text-center">Crear un nuevo Post</h1>
+
+                        <div class="alert alert-success d-none" id="alert_success" role="alert">
+                            ¡Post creado con éxito!
+                        </div>
+                        <div class="alert alert-danger d-none" id="alert_fail" role="alert">
+                            ¡No puede haber campos del Post vacíos!
+                        </div>
+
                         <div class="form-group">
                             <label for="author_post">Nombre Autor</label>
                             <input type="text" class="form-control" id="author_post" placeholder="Escribe el nombre del autor" />
@@ -61,7 +69,11 @@
                             <select class="form-control" id="tag_post">
                               <option>Seleccionar</option>
                             </select>
-                          </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="minsToRead_post">Tiempo estimado de lectura</label>
+                            <input type="number" class="form-control" id="minsToRead_post" placeholder="¿Cuántos minutos estimas de lectura?" />
+                        </div>
                         <div class="form-group">
                             <label for="content_post">Contenido del Post</label>
                             <textarea class="form-control" id="content_post" aria-label="With textarea" rows="7"></textarea>

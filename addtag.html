@@ -40,9 +40,17 @@
                 <div class="col-12 col-md-7">
                     <form class="bg-white mt-4 mb-4 p-4 card shadow">
                         <h1 class="text-center">Crear un nuevo Tag</h1>
+
+                        <div class="alert alert-success d-none" id="alert_success" role="alert">
+                            ¡Tag creado con éxito!
+                          </div>
+                          <div class="alert alert-danger d-none" id="alert_fail" role="alert">
+                            ¡El Tag no puede estar vacío!
+                          </div>
+
                         <div class="form-group">
                             <label for="name_tag">Nombre del tag</label>
-                            <input type="text" class="form-control" id="name_tag" placeholder="Escribe el nuevo tag" />
+                            <input type="text" class="form-control" autocomplete="off" id="name_tag" placeholder="Escribe el nuevo tag" />
                         </div>
                         <button type="button" class="btn btn-dark tag_name_send">Crear</button>
                     </form>
