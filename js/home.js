@@ -1,82 +1,28 @@
-// const printTags = (response) => {
-//     let text = ''
-//     for (item in response) {
-//         text += `<div class="card-body">
-//                 <p class="card-detail name">${response[item].title}</p>
-//             </div>`
-//     }
-//     $('.showTags').html(text)
-// }
-
-// const printPosts = (response) => {
-//     let text = ''
-//     for (item in response) {
-//         text += `<div class="card-body">
-//                 <p class="card-detail name">${response[item].author}</p>
-//                 <p class="card-detail name">${response[item].content}</p>
-//                 <p class="card-detail name">${response[item].dataCreated}</p> X
-//                 <p class="card-detail name">${response[item].minsToRead}</p>  X
-//                 <p class="card-detail name">${response[item].tag}</p>
-//                 <p class="card-detail name">${response[item].title}</p>
-//                 <p class="card-detail name">${response[item].urlAuthor}</p>
-//                 <p class="card-detail name">${response[item].urlPhoto}</p>
-//             </div>`
-//     }
-//     $('.showPosts').html(text)
-// }
-
-// // GET TAG
-
-// $(function () {
-//     $.ajax({
-//         url: "https://retofrontend-d1659-default-rtdb.firebaseio.com/tags/.json", //"https://koders1gpython-default-rtdb.firebaseio.com/oscar/users/.json",
-//         method: 'GET'
-//     }).done(function (response) {
-//         printTags(response);
-//     }).fail(function (err) {
-//         console.error(err)
-//         console.error(err.status)
-//         console.error(err.statusText)
-//         console.log('todo mal')
-//     })
-// })
-
-// //GET POST
-
-// $(function () {
-//     $.ajax({
-//         url: "https://retofrontend-d1659-default-rtdb.firebaseio.com/posts/.json", //"https://koders1gpython-default-rtdb.firebaseio.com/oscar/users/.json",
-//         method: 'GET'
-//     }).done(function (response) {
-//         printPosts(response);
-//     }).fail(function (err) {
-//         console.error(err)
-//         console.error(err.status)
-//         console.error(err.statusText)
-//         console.log('todo mal')
-//     })
-// })
-
 //SHOW POST LIST
 
 $(function () {
     const paintPosts = (response) => {
         console.log(response)
         let postHtml = ''
+        let counter = 1
+        let imagePost = ''
         for (item in response) {
+            if (counter === 1) {
+                imagePost = `<img src="${response[item].urlPhoto_post}" class="card-img-top" alt="...">`
+            }
             postHtml += `<div class="card_main mb-2 bg-white rounded postShow">
-            <div class="card-img-top img-post">${response[item].urlPhoto}</div>
-            <div class="card-body">
+                ${imagePost}
+                <div class="card-body">
                 <div class="d-flex flex-wrap author align-items-center mb-2">
-                    <div class="border border-secondary rounded-circle bg-primary img-author">${response[item].urlAuthor}</div>
+                    <div class="border border-secondary rounded-circle bg-primary img-author"><img src="${response[item].author_urlPhoto}" class="card-img-top" alt="..."></div>
                     <div class="author_data">
-                        <a href="" class="text-reset">${response[item].author}</a>
-                        <p class="mb-0 data-created">${response[item].dataCreated}</p>
+                        <a href="" class="text-reset">${response[item].author_post}</a>
+                        <p class="mb-0 data-created">${response[item].date_created_post}</p>
                     </div>
                 </div>
                 <div class="card-resume">
-                    <h3>${response[item].title}</h3>
-                    <div class="hashtags ml-n1 mb-2">${response[item].tag}</div>
+                    <h3>${response[item].title_post}</h3>
+                    <div class="hashtags ml-n1 mb-2">${response[item].tag_post}</div>
                     <div class="icon-card d-flex justify-content-between">
                         <div class="icon-card_left d-flex justify-content-start align-items-center">
                             <div class="icon-card-item d-flex align-items-center mr-3">
@@ -91,29 +37,29 @@ $(function () {
                             </div>
                         </div>
                         <div class="icon-card-rigth ">
-                            <small class="mins-to-read mr-1">${response[item].minsToRead}</small>
+                            <small class="mins-to-read mr-1">${response[item].minsToRead_post}</small>
                             <div class="btn btn-light btn-save">Save</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>`
+            counter++
+            imagePost = ''
         }
 
-        $('.showPosts').append(postHtml)
+        $('.container-post').append(postHtml)
 
     }
-    if ($('.response').length > 0) {
-        $.ajax({
-            url: "https://retofrontend-d1659-default-rtdb.firebaseio.com/posts/.json",
-            method: 'GET'
-        }).done(function (response) {
-            paintPosts(response)
-        }).fail(function (err) {
-            console.log(err)
-            console.log(err.status)
-            console.log(err.statusText)
-            console.log('Error')
-        })
-    }
+    $.ajax({
+        url: "https://retofrontend-d1659-default-rtdb.firebaseio.com/posts/.json",
+        method: 'GET'
+    }).done(function (response) {
+        paintPosts(response)
+    }).fail(function (err) {
+        console.log(err)
+        console.log(err.status)
+        console.log(err.statusText)
+        console.log('Error')
+    })
 })
