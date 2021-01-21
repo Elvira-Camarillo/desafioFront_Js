@@ -6,7 +6,7 @@ const fail_alert = (input_fail) => {
     }, 3000);
 }
 
-const showSelectTags = (response) => {
+const showSelectTagsSelect = (response) => {
     let text = ''
     for (item in response){
         text +=` <option>${response[item].title}</option>`
@@ -21,7 +21,7 @@ const goGetTags = () =>{
         url: "https://retofrontend-d1659-default-rtdb.firebaseio.com/tags/.json",  //"https://koders1gpython-default-rtdb.firebaseio.com/oscar/users/.json",
         method: 'GET'
     }).done(function(response) {
-        showSelectTags(response);
+        showSelectTagsSelect(response);
     }).fail(function(err){
         console.error(err.statusText)
     })
