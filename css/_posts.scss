@@ -52,14 +52,27 @@
                 margin-right: .5rem;
             }
             .author_data{
+                .text-reset{
+                    font-size: 0.95rem;
+                    font-weight: bold;
+                    font-family: 'helvetica neue';
+                }
                 a{
                     color: #4d5760;
                     font-size: 0.875rem;
+                }        
+                a:hover {
+                    color: #3845c7;
+                    text-decoration: none;
+                }
+                a:active {
+                    color: #3845c7;
+                    text-decoration: none;
                 }
                 p{
                     font-size: .75rem;
                     color: $color-gray;
-                }
+                }   
             }
         }
         .card-resume{
@@ -86,35 +99,30 @@
             }
             line-height: 250%;
             
-        /* unvisited link */
-            .title-article:link {
-                color: #08090a;
-            }
-        
-        /* visited link */
-            .title-article:visited {
-                color: #08090a;
-            }
-        
-        /* mouse over link */
-            .title-article:hover {
-                color: #3845c7;
-                text-decoration: none;
-            }
-        
-        /* selected link */
-            .title-article:active {
-                color: #3845c7;
-            }
-
-            .title-article {
-                font-size: 2em;
+            .text-reset{
+                font-size: 2rem;
                 font-weight: bold;
                 font-family: 'helvetica neue';
             }
-
-            span {
-                color:#2b2e33;
+            .text-reset:hover{
+                color: #3845c7;
+                text-decoration: none;
+            }
+            .text-reset:active {
+                color: #3845c7;
+                text-decoration: none;
+            }
+            a{
+                color: #4d5760;
+                font-size: 0.875rem;
+            }        
+            a:hover {
+                color: #3845c7;
+                text-decoration: none;
+            }
+            a:active {
+                color: #3845c7;
+                text-decoration: none;
             }
         }
     }
