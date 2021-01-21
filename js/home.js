@@ -1,4 +1,49 @@
 //SHOW POST LIST
+const showSelectTagsIndex = (response) => {
+    let text = ''
+    for (item in response){
+        text +=` <li class="list-item">
+        <a href="#" class="text-decoration-none">#${response[item].title}</a>
+        </li>`
+    }
+    $('.showTags').html(text)
+}
+
+const showSelectTags = (response) => {
+    let text = ''
+    for (item in response){
+        text +=` <p>${response[item].title}</p>`
+    }
+    $('.showTags').html(text)
+}
+
+const getTagsIndex = () =>{
+    // GET
+    $.ajax({
+        url: "https://retofrontend-d1659-default-rtdb.firebaseio.com/tags/.json",  //"https://koders1gpython-default-rtdb.firebaseio.com/oscar/users/.json",
+        method: 'GET'
+    }).done(function(response) {
+        showSelectTagsIndex(response);
+    }).fail(function(err){
+        console.error(err.statusText)
+    })
+}
+
+const getTags = () =>{
+    // GET
+    $.ajax({
+        url: "https://retofrontend-d1659-default-rtdb.firebaseio.com/tags/.json",  //"https://koders1gpython-default-rtdb.firebaseio.com/oscar/users/.json",
+        method: 'GET'
+    }).done(function(response) {
+        showSelectTags(response);
+    }).fail(function(err){
+        console.error(err.statusText)
+    })
+}
+
+$("#imgTags").click(function() {
+    window.location.href = "/addtag.html";
+});
 
 $(function () {
     const paintPosts = (response) => {
@@ -64,4 +109,7 @@ $(function () {
         console.log('Error')
     })
 })
+getTagsIndex();
 
+// $(document).ready(function()  {
+// }

@@ -1,3 +1,5 @@
+
+
 $(document).ready(function()  {
     $('#name_tag').focus() 
     $('.tag_name_send').click(function(){
