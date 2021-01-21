@@ -4,24 +4,24 @@
   font-family: "helvetica neue";
 }
 
-.footer-list-1 {
+.title-link {
   line-height: 250%;
   /* unvisited link */
   /* visited link */
   /* mouse over link */
   /* selected link */
 }
-.footer-list-1 a:link {
+.title-link a:link {
   color: #2b2e33;
 }
-.footer-list-1 a:visited {
+.title-link a:visited {
   color: #2c2f34;
 }
-.footer-list-1 a:hover {
+.title-link a:hover {
   color: #3845c7;
   text-decoration: none;
 }
-.footer-list-1 a:active {
+.title-link a:active {
   color: #3845c7;
 }
 
