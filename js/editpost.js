@@ -75,6 +75,7 @@ $('.button_update').click(function () {
         $('#alert_success_update').removeClass('d-none')
                 setTimeout(() => {
                     $('#alert_success').addClass('d-none')
+                    location.pathname = './index.html'
                 }, 3000);
     }).fail(function(err){
         console.error(err)
